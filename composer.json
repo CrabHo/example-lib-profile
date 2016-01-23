@@ -1,0 +1,39 @@
+{
+    "name": "Profile",
+    "description": "Example profile library",
+    "keywords": ["Example team","profile","lib"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Crab Ho",
+            "email": "crab.ho@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "respect/validation" : "1.0.3",
+        "monolog/monolog": "^1.17"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5",
+        "squizlabs/php_codesniffer": "^2.5"
+    },
+    "autoload": {
+        "psr-4" : {
+            "bigc\\profile\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "bigc\\profile\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": [
+            "php vendor/bin/phpcs",
+            "php vendor/bin/phpunit"
+        ],
+        "phpunit": "php vendor/bin/phpunit",
+        "phpcs": "php vendor/bin/phpcs"
+    }
+}
