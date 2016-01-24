@@ -2,6 +2,7 @@
 namespace bigc\profile\model;
 
 use bigc\profile\component\ValidProfile as ValidProfile;
+use Cascade\Cascade;
 
 class Basic
 {
@@ -10,6 +11,10 @@ class Basic
     public function __construct()
     {
         $this->validProfile = new ValidProfile();
+        //Cascade::fileConfig('test.yml');
+        Cascade::getLogger('loggerA')->info('Well, that works!');
+        Cascade::getLogger('loggerB')->error('Maybe not...');
+
     }
 
     /**
