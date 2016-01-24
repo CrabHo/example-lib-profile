@@ -1,8 +1,9 @@
 {
-    "name": "Profile",
+    "name": "monolog/monolog",
     "description": "Example profile library",
     "keywords": ["Example team","profile","lib"],
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Crab Ho",
