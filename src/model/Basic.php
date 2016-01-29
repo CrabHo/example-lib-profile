@@ -17,6 +17,25 @@ class Basic
 
     }
 
+    public function getBasicDatas() {
+        //QueryDB
+        $res = ['result' =>
+            [
+                'id'     => 1,
+                'name'   => 'Crab Ho',
+                'email'  => 'crab.ho@example.com',
+                'sex'    => 0
+            ],
+            [
+                'id'     => 2,
+                'name'   => 'Yoyo',
+                'email'  => 'yoyo@example.com',
+                'sex'    => 0
+            ]
+        ];
+        return $res;
+    }
+
     /**
     *
     *   @param  Number      $id     UserId

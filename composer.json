@@ -33,11 +33,11 @@
         "test": [
             "rm -rf ./build/logs",
             "mkdir -p ./build/logs",
-            "php vendor/bin/phpcs --warning-severity=0 --error-severity=0 --standard=PSR2 --report=checkstyle --report-file=./build/logs/checkstyle.xml ./src",
-            "php vendor/bin/phpunit -c ./build/phpunit.xml"
+            "php vendor/bin/phpcs --standard=PSR2 --report=checkstyle --report-file=./build/logs/checkstyle.xml ./src > /dev/null",
+            "@phpunit"
         ],
         "phpunit": "php vendor/bin/phpunit -c ./build/phpunit.xml",
         "phpcs": "php vendor/bin/phpcs --standard=PSR2 -p ./src",
-        "phpcs-ci": "php vendor/bin/phpcs --warning-severity=0 --error-severity=0 --standard=PSR2 --report=checkstyle --report-file=./build/logs/checkstyle.xml ./src"
+        "phpcs-ci": "php vendor/bin/phpcs --standard=PSR2 --report=checkstyle --report-file=./build/logs/checkstyle.xml ./src"
     }
 }
