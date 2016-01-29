@@ -17,25 +17,6 @@ class Basic
 
     }
 
-    public function getBasicDatas() {
-        //QueryDB
-        $res = ['result' =>
-            [
-                'id'     => 1,
-                'name'   => 'Crab Ho',
-                'email'  => 'crab.ho@example.com',
-                'sex'    => 0
-            ],
-            [
-                'id'     => 2,
-                'name'   => 'Yoyo',
-                'email'  => 'yoyo@example.com',
-                'sex'    => 0
-            ]
-        ];
-        return $res;
-    }
-
     /**
     *
     *   @param  Number      $id     UserId
@@ -44,18 +25,38 @@ class Basic
     */
     public function getBasicData($id)
     {
-        //Valid
-        $this->validProfile->checkId($id);
-
-        //QueryDB
-        $res = ['result' =>
-            [
-                'id'     => $id,
-                'name'   => 'Crab Ho',
-                'email'  => 'crab.ho@example.com',
-                'sex'    => 0
-            ]
-        ];
+        if(empty($id))
+        {
+            $res = ['result' =>
+                [
+                    [
+                        'id'     => 1,
+                        'name'   => 'Crab Ho',
+                        'email'  => 'crab.ho@example.com',
+                        'sex'    => 0
+                    ],
+                    [
+                        'id'     => 2,
+                        'name'   => 'yoyo',
+                        'email'  => 'yoyo.ho@example.com',
+                        'sex'    => 0
+                    ]
+                ]
+                
+            ];
+        }
+        else
+        {
+            $res = ['result' =>
+                [
+                    'id'     => $id,
+                    'name'   => 'Crab Ho',
+                    'email'  => 'crab.ho@example.com',
+                    'sex'    => 0
+                ]
+            ];
+        }
+        
         return $res;
     }
 
