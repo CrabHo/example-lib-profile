@@ -10,10 +10,16 @@
             "email": "crab.ho@example.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/CrabHo/monolog-cascade.git"
+        }
+    ],
     "require": {
         "php": ">=5.5.0",
         "respect/validation" : "1.0.3",
-        "theorchard/monolog-cascade" : "0.3.1"
+        "theorchard/monolog-cascade" : "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.5",
