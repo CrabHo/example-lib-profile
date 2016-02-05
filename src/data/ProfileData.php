@@ -6,6 +6,8 @@ use Cascade\Cascade;
 
 class ProfileData
 {
+    private $validRule;
+    private $validMessage;
 
     public function __construct()
     {
