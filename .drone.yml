@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: crabho/ci-build-php:5.6
+  commands:
+  - composer install
+  - composer run test
